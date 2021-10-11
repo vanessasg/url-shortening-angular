@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="logo"></div>
+
+  <div class="nav" [ngClass]='open ? "open" : "close"'>
+
+    <div class="menu">
+      <a href="">Features</a>
+      <a href="">Pricing</a>
+      <a href="">Resources</a>
+    </div>
+    <div class="log">
+      <button class="login">Login</button>
+      <button class="signup">Sign Up</button>
+    </div>
+
+  </div>
+  <div class="icon" (click)='showHideMenu()'>
+    <mat-icon>menu</mat-icon>
+  </div>
+
+</div>

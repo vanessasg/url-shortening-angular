@@ -1,0 +1,24 @@
+<div class="container">
+  <form action="" id="form-bg" (ngSubmit)='showShortUrl()'>
+    <div id="form-input">
+      <div id='input-box'>
+        <input type="text" placeholder={{inputPlaceholder}} name="inputValue" [(ngModel)]='inputValue' required
+          [ngStyle]="{'border': border, 'outline-color': outline }">
+        <mat-error *ngIf='err===true'> {{ errMess }}</mat-error>
+      </div>
+
+      <button>Shorten it!</button>
+    </div>
+  </form>
+
+  <div *ngFor='let link of shortUrlsArr; index as i;' id="result-list">
+    <div id="link-left"><span>{{ link.original_link }}</span></div>
+    <div id="link-right">
+      <span>{{ link.short_link }}</span>
+      <button [cdkCopyToClipboard]='link.full_short_link' (click)='copyChange(i)'
+        [ngClass]='copied === link.full_short_link ? "copied": "link-button" '>
+        {{ copied === link.full_short_link ? 'Copied' : 'Copy' }}
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  min-width: 280px;
+  text-align: center;
+  background-color: var(--dark-violet);
+  background-image: url('/assets/images/bg-boost-desktop.svg');
+  background-size: 100% 100%;
+
+  h1 {
+    font-size: 1.7em;
+    line-height: 70px;
+    color: white;
+    padding-top: 50px;
+  }
+
+  button {
+    height: 45px;
+    width: 150px;
+    border-radius: 22px;
+    border: none;
+    background-color: var(--cyan);
+    color: white;
+    font-size: 0.8em;
+    margin-bottom: 50px;
+
+    &:hover {
+      background-color: var(--light-cyan);
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and(max-width: 400px) {
+  .container {
+    background-image: url('/assets/images/bg-boost-mobile.svg');
+  }
+
+  h1 {
+    font-size: 1.2em !important;
+    line-height: 35px;
+  }
+}

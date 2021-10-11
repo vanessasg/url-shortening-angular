@@ -1,0 +1,146 @@
+.container {
+  width: 90%;
+  max-width: 1000px;
+  min-width: 280px;
+  height: 35px;
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    padding: 5px 5px 0 5px;
+    width: 20%;
+    height: 18px;
+    background-image: url('/assets/images/logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .nav {
+    width: 80%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+
+    .menu {
+      display: flex;
+      align-items: center;
+
+      a {
+        padding: 0 10px;
+        font-size: 0.5em;
+        text-decoration: none;
+        color: var(--grayish-violet);
+
+        &:hover {
+          color: var(--dark-violet);
+        }
+      }
+    }
+
+    .log {
+      display: flex;
+      align-items: center;
+
+      button {
+        font-size: 0.5em;
+        width: 60px;
+        height: 25px;
+      }
+
+      .login {
+        color: var(--grayish-violet);
+        background: none;
+        border: none;
+
+        &:hover {
+          color: var(--dark-violet);
+          cursor: pointer;
+        }
+      }
+
+      .signup {
+        border: none;
+        background-color: var(--cyan);
+        border-radius: 20px;
+        color: white;
+
+        &:hover {
+          background-color: var(--light-cyan);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .icon {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 580px) {
+
+  .logo {
+    width: 50% !important;
+    height: 25px !important;
+  }
+
+  .icon {
+    display: block !important;
+    width: 50% !important;
+    text-align: right;
+    cursor: pointer;
+    color: gray;
+  }
+
+  .close {
+    display: none !important;
+  }
+
+  .open {
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    height:fit-content !important;
+    width: 90% !important;
+    align-self: baseline;
+    background-color: var(--dark-violet);
+    border-radius: 10px;
+
+    position: absolute;
+    top: 70px;
+
+    .menu {
+      flex-direction: column;
+      width: 90%;
+      border-bottom: 1px solid gray;
+      padding: 20px 0;
+      a {
+        font-size: 0.85em !important;
+        color: white !important;
+        padding: 10px !important;
+      }
+    }
+    .log {
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      margin: 20px auto;
+
+      button {
+        font-size: 0.85em !important;
+        color: white !important;
+        height: 40px !important;
+      }
+
+      .signup {
+        width: 100% !important;
+        border-radius: 50px !important;
+        margin: 15px auto;
+      }
+    }
+  }
+}

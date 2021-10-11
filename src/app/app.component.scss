@@ -1,0 +1,19 @@
+.hero-section {
+  overflow: hidden;
+  min-width: 280px;
+}
+
+.shortener, .statistics {
+  background-color: var(--bg-gray);
+  min-width: 280px;
+}
+
+.banner {
+  min-width: 280px;
+}
+
+.footer {
+  background-color: var(--very-dark-violet); /***** non funziona*/
+  min-width: 280px;
+  margin-top: -12px;
+}
