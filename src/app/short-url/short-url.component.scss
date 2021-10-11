@@ -14,7 +14,7 @@
   width: 100%;
   height: 120px;
   background-color: var(--dark-violet);
-  background-image: url('/assets/images/bg-shorten-desktop.svg');
+  background-image: url('../../assets/images/bg-shorten-desktop.svg');
   background-size: 100% 100%;
 
   display: flex;
@@ -148,7 +148,7 @@ mat-error {
     height: 140px;
     flex: none;
     border-radius: 5px;
-    background-image: url('/assets/images/bg-shorten-mobile.svg');
+    background-image: url('../../assets/images/bg-shorten-mobile.svg');
   }
 
   #form-input {
